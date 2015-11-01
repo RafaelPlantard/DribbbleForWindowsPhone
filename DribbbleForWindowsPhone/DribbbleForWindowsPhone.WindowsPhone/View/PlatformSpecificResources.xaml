@@ -1,0 +1,83 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--#region Brushes-->
+
+    <!--#endregion Brushes-->
+
+    <!--#region Converters-->
+
+    <!--#endregion Converters-->
+
+    <!--#region Styles-->
+
+    <!--#region Grids-->
+
+    <Style BasedOn="{StaticResource GridUniversalDefaultStyle}" TargetType="Grid" x:Key="GridDefaultStyle">
+        <Setter Property="ContinuumNavigationTransitionInfo.IsEntranceElement" Value="True" />
+    </Style>
+
+    <!--#endregion Grids-->
+
+    <!--#region Pages-->
+
+    <Style BasedOn="{StaticResource PageUniversalDefaultStyle}" TargetType="Page" x:Key="PageDefaultStyle">
+        <Setter Property="Transitions">
+            <Setter.Value>
+                <TransitionCollection>
+                    <NavigationThemeTransition>
+                        <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                            <ContinuumNavigationTransitionInfo />
+                        </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    </NavigationThemeTransition>
+                </TransitionCollection>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style BasedOn="{StaticResource PageUniversalDefaultStyle}" TargetType="Page" x:Key="PageSlideNavigationStyle">
+        <Setter Property="Transitions">
+            <Setter.Value>
+                <TransitionCollection>
+                    <NavigationThemeTransition>
+                        <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                            <SlideNavigationTransitionInfo />
+                        </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    </NavigationThemeTransition>
+                </TransitionCollection>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style BasedOn="{StaticResource PageUniversalDefaultStyle}" TargetType="Page" x:Key="PageCommonNavigationStyle">
+        <Setter Property="Transitions">
+            <Setter.Value>
+                <TransitionCollection>
+                    <NavigationThemeTransition>
+                        <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                            <CommonNavigationTransitionInfo IsStaggeringEnabled="True" />
+                        </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    </NavigationThemeTransition>
+                </TransitionCollection>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--#endregion Pages-->
+
+    <!--#endregion Styles-->
+
+    <!--#region Triggers-->
+
+    <!--#endregion Triggers-->
+
+    <!--#region Control Templates-->
+
+    <!--#endregion Control Templates-->
+
+    <!--#region Storyboards-->
+
+    <!--#endregion Storyboards-->
+
+</ResourceDictionary>

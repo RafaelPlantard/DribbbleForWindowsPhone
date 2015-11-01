@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>6cfb82c3-d242-4e96-b5ac-911f20c3fac2</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>DribbbleForWindowsPhone</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\Behavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\ProgressBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\StatusBarBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\SwipeTriggerBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\Utils\SwipeDirection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\LoadStateEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\LoadStateEventHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionaryChangedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SaveStateEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SaveStateEventHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManagerException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ImageBrushConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ExtensionMethodDotNet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\AsyncHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\AsyncRelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\DribbbleApiHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ExclusiveSynchronizationContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\FileReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\NavigateHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\StringHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\UIDispatcher.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\DribbblePagination.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\DribbbleCenter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ShotCategory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\AccelerometerHelpersViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ShotDetailsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModelLocator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\HeaderUserControl.xaml.cs">
+      <DependentUpon>HeaderUserControl.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Images\en-US\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Images\pt-BR\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Strings\en-US\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Strings\pt-BR\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)View\HeaderUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)View\UniversalResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Images\Dribbble.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\DribbbleBall.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\DribbbleBallMark.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\DribbbleLogo.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\DribbbleLogoLight.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\DribbbleLogoSuperLight.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\Exposure.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\Eye.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\EyeDarkGray.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\EyeLightGray.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\Instagram.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\Love.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\LoveDarkGray.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\LoveLightGray.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\Messaging.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\PaintBucketDark.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\PaintBucketLight.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\Post-400Px.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\Post.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\PostTeaser.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\Twitter.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\UploadDark.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\UploadLight.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\User.scale-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Strings\ListShotsPopular1.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Strings\ListShotsPopular2.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Strings\ListShotsPopular3.json" />
+  </ItemGroup>
+</Project>

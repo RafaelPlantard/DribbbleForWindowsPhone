@@ -1,0 +1,40 @@
+﻿<UserControl
+    x:Class="DribbbleForWindowsPhone.View.HeaderUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:behaviors="using:DribbbleForWindowsPhone.Behaviors"
+    xmlns:c="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    mc:Ignorable="d"
+    d:DesignHeight="80"
+    d:DesignWidth="400"
+    DataContext="{Binding AccelerometerHelpers, Source={StaticResource Locator}}">
+
+    <i:Interaction.Behaviors>
+        <behaviors:StatusBarBehavior IsVisible="False" />
+
+        <c:EventTriggerBehavior EventName="Loaded">
+            <c:InvokeCommandAction Command="{Binding StartAccelerometerCommand}" CommandParameter="1" />
+        </c:EventTriggerBehavior>
+    </i:Interaction.Behaviors>
+
+    <Grid Background="{ThemeResource CharcoalBrush}">
+
+        <Image Style="{ThemeResource DribbbleLogoSuperLightImageStyle}">
+            <i:Interaction.Behaviors>
+                <c:EventTriggerBehavior EventName="PointerEntered">
+                    <c:ChangePropertyAction PropertyName="Style"
+                                            Value="{ThemeResource DribbbleLogoLightImageStyle}"/>
+                </c:EventTriggerBehavior>
+
+                <c:EventTriggerBehavior EventName="PointerExited">
+                    <c:ChangePropertyAction PropertyName="Style"
+                                            Value="{ThemeResource DribbbleLogoSuperLightImageStyle}"></c:ChangePropertyAction>
+                </c:EventTriggerBehavior>
+            </i:Interaction.Behaviors>
+        </Image>
+    </Grid>
+
+</UserControl>
