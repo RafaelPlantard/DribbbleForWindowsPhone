@@ -1,5 +1,5 @@
-MainPackage=D:\Documents\GitHub\RafaelPlantard\DFWP\DribbbleForWindowsPhone\DribbbleForWindowsPhone.WindowsPhone\bin\Release\DribbbleForWindowsPhone.WindowsPhone_2015.821.51.536_AnyCPU.appx
-SymbolPackage=D:\Documents\GitHub\RafaelPlantard\DFWP\DribbbleForWindowsPhone\DribbbleForWindowsPhone.WindowsPhone\AppPackages\DribbbleForWindowsPhone.WindowsPhone_2015.821.51.536_Test\DribbbleForWindowsPhone.WindowsPhone_2015.821.51.536_AnyCPU.appxsym
-ResourcePack=D:\Documents\GitHub\RafaelPlantard\DFWP\DribbbleForWindowsPhone\DribbbleForWindowsPhone.WindowsPhone\bin\Release\DribbbleForWindowsPhone.WindowsPhone_2015.821.51.536_scale-100.appx
-ResourcePack=D:\Documents\GitHub\RafaelPlantard\DFWP\DribbbleForWindowsPhone\DribbbleForWindowsPhone.WindowsPhone\bin\Release\DribbbleForWindowsPhone.WindowsPhone_2015.821.51.536_scale-140.appx
-ResourcePack=D:\Documents\GitHub\RafaelPlantard\DFWP\DribbbleForWindowsPhone\DribbbleForWindowsPhone.WindowsPhone\bin\Release\DribbbleForWindowsPhone.WindowsPhone_2015.821.51.536_scale-180.appx
+MainPackage=D:\Documents\GitHub\RafaelPlantard\DFWP\DribbbleForWindowsPhone\DribbbleForWindowsPhone.WindowsPhone\bin\Release\DribbbleForWindowsPhone.WindowsPhone_2015.821.51.537_AnyCPU.appx
+SymbolPackage=D:\Documents\GitHub\RafaelPlantard\DFWP\DribbbleForWindowsPhone\DribbbleForWindowsPhone.WindowsPhone\AppPackages\DribbbleForWindowsPhone.WindowsPhone_2015.821.51.537_Test\DribbbleForWindowsPhone.WindowsPhone_2015.821.51.537_AnyCPU.appxsym
+ResourcePack=D:\Documents\GitHub\RafaelPlantard\DFWP\DribbbleForWindowsPhone\DribbbleForWindowsPhone.WindowsPhone\bin\Release\DribbbleForWindowsPhone.WindowsPhone_2015.821.51.537_scale-100.appx
+ResourcePack=D:\Documents\GitHub\RafaelPlantard\DFWP\DribbbleForWindowsPhone\DribbbleForWindowsPhone.WindowsPhone\bin\Release\DribbbleForWindowsPhone.WindowsPhone_2015.821.51.537_scale-140.appx
+ResourcePack=D:\Documents\GitHub\RafaelPlantard\DFWP\DribbbleForWindowsPhone\DribbbleForWindowsPhone.WindowsPhone\bin\Release\DribbbleForWindowsPhone.WindowsPhone_2015.821.51.537_scale-180.appx

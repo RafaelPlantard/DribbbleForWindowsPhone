@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="51943RafaelFerreira.DribbbleforWindowsPhone" Publisher="CN=080E2844-4025-4467-B92D-B9BF43E6072F" Version="2015.821.51.536" />
+  <Identity Name="51943RafaelFerreira.DribbbleforWindowsPhone" Publisher="CN=080E2844-4025-4467-B92D-B9BF43E6072F" Version="2015.821.51.537" />
   <mp:PhoneIdentity PhoneProductId="98021efe-6be2-40c7-8c6c-47d8e53e033b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Dribbble for Windows Phone</DisplayName>
