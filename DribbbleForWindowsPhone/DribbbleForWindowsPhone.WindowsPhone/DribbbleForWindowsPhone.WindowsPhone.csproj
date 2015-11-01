@@ -17,7 +17,7 @@
     <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
-    <AppxBundle>Auto</AppxBundle>
+    <AppxBundle>Never</AppxBundle>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -106,61 +106,80 @@
     <Content Include="Assets\DribbbleBall.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\DribbbleBall.scale-240.png" />
     <Content Include="Assets\DribbbleBallMark.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\DribbbleBallMark.scale-240.png" />
     <Content Include="Assets\DribbbleLogo.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\DribbbleLogo.scale-240.png" />
     <Content Include="Assets\DribbbleLogoLight.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\DribbbleLogoLight.scale-240.png" />
     <Content Include="Assets\DribbbleLogoSuperLight.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\DribbbleLogoSuperLight.scale-240.png" />
     <Content Include="Assets\Exposure.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Exposure.scale-240.png" />
     <Content Include="Assets\Eye.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Eye.scale-240.png" />
     <Content Include="Assets\EyeDarkGray.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\EyeDarkGray.scale-240.png" />
     <Content Include="Assets\EyeLightGray.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\EyeLightGray.scale-240.png" />
     <Content Include="Assets\Instagram.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Instagram.scale-240.png" />
     <Content Include="Assets\Logo.scale-240.png" />
     <Content Include="Assets\Love.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Love.scale-240.png" />
     <Content Include="Assets\LoveDarkGray.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\LoveDarkGray.scale-240.png" />
     <Content Include="Assets\LoveLightGray.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\LoveLightGray.scale-240.png" />
     <Content Include="Assets\Messaging.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Messaging.scale-240.png" />
     <Content Include="Assets\PaintBucketDark.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\PaintBucketDark.scale-240.png" />
     <Content Include="Assets\PaintBucketLight.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\PaintBucketLight.scale-240.png" />
     <Content Include="Assets\Post-400Px.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Post-400Px.scale-240.png" />
     <Content Include="Assets\Post.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Post.scale-240.png" />
     <Content Include="Assets\PostTeaser.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\PostTeaser.scale-240.png" />
     <Content Include="Assets\SmallLogo.scale-240.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-140.png" />
@@ -171,15 +190,19 @@
     <Content Include="Assets\Twitter.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Twitter.scale-240.png" />
     <Content Include="Assets\UploadDark.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\UploadDark.scale-240.png" />
     <Content Include="Assets\UploadLight.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\UploadLight.scale-240.png" />
     <Content Include="Assets\User.scale-100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\User.scale-240.png" />
     <Content Include="Assets\WideLogo.scale-240.png" />
     <Content Include="StoreManifest.xml" />
     <None Include="Package.StoreAssociation.xml" />
