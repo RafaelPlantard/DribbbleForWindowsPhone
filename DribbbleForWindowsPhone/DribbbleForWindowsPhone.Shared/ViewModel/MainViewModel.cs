@@ -1,28 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using DribbbleForWindowsPhone.Helpers;
+﻿using DribbbleForWindowsPhone.Helpers;
 using DribbbleForWindowsPhone.Model;
 using GalaSoft.MvvmLight;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace DribbbleForWindowsPhone.ViewModel
 {
     /// <summary>
     /// Represents the MainPage's ViewModel.
     /// </summary>
-    class MainViewModel : ViewModelBase
+    internal class MainViewModel : ViewModelBase
     {
-        #region Constants
-
         /// <summary>
         /// The maximum number of elements of pages in the paginator list.
         /// </summary>
         private const byte MaximumPagesInPaginator = 9;
-
-        #endregion Constants
-
-        #region Fields
 
         /// <summary>
         /// The data to show on list of results from the Dribbble API.
@@ -38,10 +33,6 @@ namespace DribbbleForWindowsPhone.ViewModel
         /// The list to show the pagination.
         /// </summary>
         private IList<string> _pagination;
-
-        #endregion Fields
-
-        #region Properties
 
         /// <summary>
         /// The response from the Dribbble API.
@@ -61,6 +52,15 @@ namespace DribbbleForWindowsPhone.ViewModel
             set { Set(() => ErrorMessages, ref _errorMessages, value); }
         }
 
+        /// <summary>
+        /// Represents the command that load shots available on Dribbble API.
+        /// </summary>
+        public ICommand LoadInitialShotsCommand { get; private set; }
+
+        /// <summary>
+        /// Represents the command that load shots available on Dribbble API.
+        /// </summary>
+        public ICommand LoadShotsCommand { get; private set; }
 
         /// <summary>
         /// The list to show to the user the current pagination.
@@ -72,20 +72,6 @@ namespace DribbbleForWindowsPhone.ViewModel
         }
 
         /// <summary>
-        /// Represents the command that load shots available on Dribbble API.
-        /// </summary>
-        public ICommand LoadInitialShotsCommand { get; private set; }
-
-        /// <summary>
-        /// Represents the command that load shots available on Dribbble API.
-        /// </summary>
-        public ICommand LoadShotsCommand { get; private set; }
-
-        #endregion Properties
-
-        #region Constructors
-
-        /// <summary>
         /// The default constructor.
         /// </summary>
         public MainViewModel()
@@ -95,59 +81,6 @@ namespace DribbbleForWindowsPhone.ViewModel
             LoadShotsCommand = new AsyncRelayCommand(async p => await LoadShots(p));
 
             Data = DribbbleCenter.Dribbble;
-        }
-
-        #endregion Constructors
-
-        #region Methods
-
-        #region Private
-
-        /// <summary>
-        /// Responsible for load the shots on first load of app.
-        /// </summary>
-        private async Task LoadInitialShots()
-        {
-            if (Data.Shots == null)
-                await LoadShots();
-        }
-
-        /// <summary>
-        /// Load shots from Dribbble API.
-        /// </summary>
-        /// <param name="page">The page to load the shots.</param>
-        private async Task LoadShots(object page = null)
-        {
-            uint? pageToLoad = null;
-
-            try
-            {
-                if (page != null)
-                {
-                    pageToLoad = Convert.ToUInt32(page);
-                }
-            }
-            catch (Exception)
-            {
-                return;
-            }
-
-            try
-            {
-                await DribbbleCenter.Dribbble.LoadShots(pageToLoad);
-
-                Data = null; // Clear the list.
-
-                Data = DribbbleCenter.Dribbble;
-
-                Pagination = GeneratePagination();
-
-                ErrorMessages = null;
-            }
-            catch (Exception e)
-            {
-                ErrorMessages = e.Message;
-            }
         }
 
         /// <summary>
@@ -222,8 +155,51 @@ namespace DribbbleForWindowsPhone.ViewModel
             return pagesPagination;
         }
 
-        #endregion Private
+        /// <summary>
+        /// Responsible for load the shots on first load of app.
+        /// </summary>
+        private async Task LoadInitialShots()
+        {
+            if (Data.Shots == null)
+                await LoadShots();
+        }
 
-        #endregion Methods
+        /// <summary>
+        /// Load shots from Dribbble API.
+        /// </summary>
+        /// <param name="page">The page to load the shots.</param>
+        private async Task LoadShots(object page = null)
+        {
+            uint? pageToLoad = null;
+
+            try
+            {
+                if (page != null)
+                {
+                    pageToLoad = Convert.ToUInt32(page);
+                }
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
+            try
+            {
+                await DribbbleCenter.Dribbble.LoadShots(pageToLoad);
+
+                Data = null; // I must to clear the list to update the bindings.
+
+                Data = DribbbleCenter.Dribbble;
+
+                Pagination = GeneratePagination();
+
+                ErrorMessages = null;
+            }
+            catch (Exception e)
+            {
+                ErrorMessages = e.Message;
+            }
+        }
     }
 }

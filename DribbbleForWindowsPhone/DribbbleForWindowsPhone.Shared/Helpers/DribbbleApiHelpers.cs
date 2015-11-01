@@ -10,23 +10,17 @@ namespace DribbbleForWindowsPhone.Helpers
     /// <summary>
     /// Helper for Dribbble Api access.
     /// </summary>
-    static class DribbbleApiHelpers
+    public static class DribbbleApiHelpers
     {
-        #region Fields
-
-        /// <summary>
-        /// The path for Dribbble api access.
-        /// </summary>
-        private const string DribbbleApiUri = "https://api.dribbble.com/v1/";
-
         /// <summary>
         /// The client access token for Dribbble api.
         /// </summary>
         private const string DribbbleAccessToken = "7e5aba3a3f67620071d8b5c4dbc79eacd776d8ccfa4c76c0762430d8f670fd06";
 
-        #endregion Fields
-
-        #region Properties
+        /// <summary>
+        /// The path for Dribbble api access.
+        /// </summary>
+        private const string DribbbleApiUri = "https://api.dribbble.com/v1/";
 
         /// <summary>
         /// Gets the <see cref="UriBuilder"/> for the shots on Dribbble.
@@ -42,12 +36,6 @@ namespace DribbbleForWindowsPhone.Helpers
                 return new UriBuilder(shots);
             }
         }
-
-        #endregion Properties
-
-        #region Methods
-
-        #region Public
 
         /// <summary>
         /// Fix the JSON response.
@@ -101,27 +89,6 @@ namespace DribbbleForWindowsPhone.Helpers
         }
 
         /// <summary>
-        /// Generates the Uri for request shots from Dribbble API.
-        /// </summary>
-        /// <param name="page">The current page on pagination parameters.</param>
-        /// <param name="perPage">The amount of elements per page on pagination parameters.</param>
-        /// <remarks>This method also injects the api key as a query on the uri.</remarks>
-        /// <returns>The Uri for request shots.</returns>
-        public static Uri GetShotsUri(uint page = 1, uint perPage = 5)
-        {
-            // Fix the perPage argument.
-            perPage = (perPage == 0) ? 5 : perPage;
-
-            UriBuilder uriBuilder = Shots;
-
-            string queryFormat = "page={0}&per_page={1}&access_token={2}";
-
-            uriBuilder.Query = string.Format(queryFormat, page, perPage, DribbbleAccessToken);
-
-            return uriBuilder.Uri;
-        }
-
-        /// <summary>
         /// Get the json response from the Dribble API.
         /// </summary>
         /// <param name="uri">The uri to be requested.</param>
@@ -144,11 +111,27 @@ namespace DribbbleForWindowsPhone.Helpers
                 string message = "No internet connection, shake the device to try again!";
                 throw new Exception(message, e);
             }
-            
         }
 
-        #endregion Public
+        /// <summary>
+        /// Generates the Uri for request shots from Dribbble API.
+        /// </summary>
+        /// <param name="page">The current page on pagination parameters.</param>
+        /// <param name="perPage">The amount of elements per page on pagination parameters.</param>
+        /// <remarks>This method also injects the api key as a query on the uri.</remarks>
+        /// <returns>The Uri for request shots.</returns>
+        public static Uri GetShotsUri(uint page = 1, uint perPage = 10)
+        {
+            // Fix the perPage argument.
+            perPage = (perPage == 0) ? 10 : perPage;
 
-        #endregion Methods
+            UriBuilder uriBuilder = Shots;
+
+            string queryFormat = "page={0}&per_page={1}&access_token={2}";
+
+            uriBuilder.Query = string.Format(queryFormat, page, perPage, DribbbleAccessToken);
+
+            return uriBuilder.Uri;
+        }
     }
 }

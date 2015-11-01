@@ -1,8 +1,4 @@
-﻿using DribbbleForWindowsPhone.Helpers;
-using System;
-using System.Threading.Tasks;
-using Windows.Storage;
-using Windows.Storage.Streams;
+﻿using System;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
@@ -14,8 +10,6 @@ namespace DribbbleForWindowsPhone.Converters
     /// </summary>
     public class ImageBrushConverter : IValueConverter
     {
-        #region IValueConverter members
-
         /// <summary>
         /// Convert the ImageFileName to an BitmapImage object.
         /// </summary>
@@ -26,26 +20,6 @@ namespace DribbbleForWindowsPhone.Converters
         /// <returns>The converted value.</returns>
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            /*
-             * TODO: Try to use a totally asynchronous solution.
-             * 
-             * Uri uri = new Uri(path);
-             * 
-             * StorageFile file = await FileReader.GetFileFromInstalledFolderAsync(path);
-             * 
-             * ImageBrush imageBrush = new ImageBrush();
-             * 
-             * using (IRandomAccessStream fileStream = await file.OpenAsync(FileAccessMode.Read))
-             * {
-             *  BitmapImage bitmapImage = new BitmapImage();
-             *  
-             *  await bitmapImage.SetSourceAsync(fileStream);
-             * }
-             * 
-             * string path = value as string;
-             * return imageBrush;
-             */
-
             Uri uri = value as Uri;
 
             ImageBrush imageBrush = new ImageBrush();
@@ -69,7 +43,5 @@ namespace DribbbleForWindowsPhone.Converters
         {
             throw new NotImplementedException();
         }
-
-        #endregion IValueConverter members
     }
 }

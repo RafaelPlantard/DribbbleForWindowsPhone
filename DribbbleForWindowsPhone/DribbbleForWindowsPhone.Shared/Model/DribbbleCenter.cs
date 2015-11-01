@@ -1,26 +1,20 @@
-﻿using System;
+﻿using DribbbleForWindowsPhone.Helpers;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using DribbbleForWindowsPhone.Helpers;
-using Newtonsoft.Json;
 
 namespace DribbbleForWindowsPhone.Model
 {
     /// <summary>
     /// The singleton responsible for provides the access to the Shots on Dribbble.
     /// </summary>
-    class DribbbleCenter : DribbblePagination
+    internal class DribbbleCenter : DribbblePagination
     {
-        #region Fields
-
         /// <summary>
         /// The singleton to access the Dribbble response.
         /// </summary>
         private static DribbbleCenter _dribbble;
-
-        #endregion Fields
-
-        #region Properties
 
         /// <summary>
         /// Represents the Dribbble API's response.
@@ -36,16 +30,6 @@ namespace DribbbleForWindowsPhone.Model
         /// The shots from a request to Dribble API.
         /// </summary>
         public IList<Shot> Shots { get; set; }
-
-        #endregion
-
-        #region Methods
-
-        #region Private
-
-        #endregion Private
-
-        #region Public
 
         /// <summary>
         /// Load the Shots directly from Dribbble.com.
@@ -70,9 +54,5 @@ namespace DribbbleForWindowsPhone.Model
 
             Pages = 99; // Set a manual number of pages, because, this value is not more returned for the API.
         }
-
-        #endregion Public
-
-        #endregion Methods
     }
 }
