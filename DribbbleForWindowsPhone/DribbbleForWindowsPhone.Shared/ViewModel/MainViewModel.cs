@@ -136,6 +136,8 @@ namespace DribbbleForWindowsPhone.ViewModel
             {
                 await DribbbleCenter.Dribbble.LoadShots(pageToLoad);
 
+                Data = null; // Clear the list.
+
                 Data = DribbbleCenter.Dribbble;
 
                 Pagination = GeneratePagination();

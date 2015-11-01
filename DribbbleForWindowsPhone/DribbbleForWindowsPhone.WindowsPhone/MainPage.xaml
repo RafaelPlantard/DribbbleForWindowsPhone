@@ -10,7 +10,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     mc:Ignorable="d"
     DataContext="{Binding Main, Source={StaticResource Locator}}"
-    NavigationCacheMode="Enabled"
+    NavigationCacheMode="Required"
     Style="{ThemeResource PageDefaultStyle}">
 
     <!--TODO: All Todo Notes will be made in the next version. =D-->
@@ -73,9 +73,6 @@
             <ListView ItemsSource="{Binding Data.Shots}" ItemTemplate="{StaticResource ShotItemTemplate}" x:Name="ShotsListView">
                 <i:Interaction.Behaviors>
                     <c:EventTriggerBehavior EventName="Loaded">
-                        <c:ChangePropertyAction TargetObject="{Binding ElementName=ShotGrid}" PropertyName="Width" 
-                                                Value="{Binding ElementName=ShotsListView, Path=ActualWidth}" />
-
                         <c:InvokeCommandAction Command="{Binding LoadInitialShotsCommand}" />
                     </c:EventTriggerBehavior>
                 </i:Interaction.Behaviors>

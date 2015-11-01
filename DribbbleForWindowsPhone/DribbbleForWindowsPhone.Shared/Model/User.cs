@@ -1,31 +1,50 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace DribbbleForWindowsPhone.Model
 {
     /// <summary>
     /// Represents the <see cref="User"/> related to a specific <see cref="Shot"/> on <see cref="DribbbleCenter"/>.
     /// </summary>
-    class User
+    [JsonObject]
+    public class User
     {
-        #region Properties
+        /// <summary>
+        /// The avatar url.
+        /// </summary>
+        /// <example>https://d13yacurqjgara.cloudfront.net/users/22/avatars/normal/a5485ce6f3de5df6093fb271a89ba5b1.jpg?1427653634</example>
+        [JsonProperty("avatar_url")]
+        public Uri AvatarUrl { get; set; }
 
         /// <summary>
-        /// The unique identifier.
+        /// The amount of comment was received.
         /// </summary>
-        /// <example>22</example>
-        public int Id { get; set; }
+        /// <example>2565</example>
+        public uint CommentReceivedCount { get; set; }
 
         /// <summary>
-        /// The name.
+        /// The amount of comments.
         /// </summary>
-        /// <example>Tim Van Damme</example>
-        public string Name { get; set; }
+        /// <example>579</example>
+        public uint CommentsCount { get; set; }
 
         /// <summary>
-        /// The location.
+        /// The date and time that it was created.
         /// </summary>
-        /// <example>San Francisco, CA</example>
-        public string Location { get; set; }
+        /// <example>2009/08/10 04:38:51 -0400</example>
+        public DateTime CreatedAt { get; set; }
+
+        /// <summary>
+        /// The player's unique identifier that drafted it.
+        /// </summary>
+        /// <example>1</example>
+        public uint? DraftedByPlayerId { get; set; }
+
+        /// <summary>
+        /// The amount of draftees.
+        /// </summary>
+        /// <example>32</example>
+        public uint DrafteesCount { get; set; }
 
         /// <summary>
         /// The amount of followers.
@@ -34,10 +53,16 @@ namespace DribbbleForWindowsPhone.Model
         public uint FollowersCount { get; set; }
 
         /// <summary>
-        /// The amount of draftees.
+        /// The amount of following count.
         /// </summary>
-        /// <example>32</example>
-        public uint DrafteesCount { get; set; }
+        /// <example>508</example>
+        public uint FollowingCount { get; set; }
+
+        /// <summary>
+        /// The unique identifier.
+        /// </summary>
+        /// <example>22</example>
+        public int Id { get; set; }
 
         /// <summary>
         /// The amount of likes.
@@ -52,16 +77,23 @@ namespace DribbbleForWindowsPhone.Model
         public uint LikesReceivedCount { get; set; }
 
         /// <summary>
-        /// The amount of comments.
+        /// The links for an user.
         /// </summary>
-        /// <example>579</example>
-        public uint CommentsCount { get; set; }
+        [JsonProperty("links")]
+        public UserLink Links { get; set; }
 
         /// <summary>
-        /// The amount of comment was received.
+        /// The location.
         /// </summary>
-        /// <example>2565</example>
-        public uint CommentReceivedCount { get; set; }
+        /// <example>San Francisco, CA</example>
+        public string Location { get; set; }
+
+        /// <summary>
+        /// The name.
+        /// </summary>
+        /// <example>Tim Van Damme</example>
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
         /// <summary>
         /// The amount of rebounds.
@@ -76,22 +108,10 @@ namespace DribbbleForWindowsPhone.Model
         public int ReboundsReceivedCount { get; set; }
 
         /// <summary>
-        /// The url.
+        /// The amount of shots.
         /// </summary>
-        /// <example>http://dribbble.com/maxvoltar</example>
-        public Uri Url { get; set; }
-
-        /// <summary>
-        /// The avatar url.
-        /// </summary>
-        /// <example>https://d13yacurqjgara.cloudfront.net/users/22/avatars/normal/a5485ce6f3de5df6093fb271a89ba5b1.jpg?1427653634</example>
-        public Uri AvatarUrl { get; set; }
-
-        /// <summary>
-        /// The user name.
-        /// </summary>
-        /// <example>maxvoltar</example>
-        public string Username { get; set; }
+        /// <example>109</example>
+        public uint ShotsCount { get; set; }
 
         /// <summary>
         /// The Twitter screen name.
@@ -100,35 +120,21 @@ namespace DribbbleForWindowsPhone.Model
         public string TwitterScreenName { get; set; }
 
         /// <summary>
+        /// The url.
+        /// </summary>
+        /// <example>http://dribbble.com/maxvoltar</example>
+        public Uri Url { get; set; }
+
+        /// <summary>
+        /// The user name.
+        /// </summary>
+        /// <example>maxvoltar</example>
+        public string Username { get; set; }
+
+        /// <summary>
         /// The url of the website.
         /// </summary>
         /// <example>http://maxvoltar.com/</example>
         public Uri WebsiteUrl { get; set; }
-
-        /// <summary>
-        /// The player's unique identifier that drafted it.
-        /// </summary>
-        /// <example>1</example>
-        public uint? DraftedByPlayerId { get; set; }
-
-        /// <summary>
-        /// The amount of shots.
-        /// </summary>
-        /// <example>109</example>
-        public uint ShotsCount { get; set; }
-
-        /// <summary>
-        /// The amount of following count.
-        /// </summary>
-        /// <example>508</example>
-        public uint FollowingCount { get; set; }
-
-        /// <summary>
-        /// The date and time that it was created.
-        /// </summary>
-        /// <example>2009/08/10 04:38:51 -0400</example>
-        public DateTime CreatedAt { get; set; }
-
-        #endregion Properties
     }
 }

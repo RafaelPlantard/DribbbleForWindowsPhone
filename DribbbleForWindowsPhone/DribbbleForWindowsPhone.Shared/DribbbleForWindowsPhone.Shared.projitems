@@ -43,8 +43,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Model\DribbblePagination.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\DribbbleCenter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\ShotCategory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ShotImage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Shot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\UserLink.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\AccelerometerHelpersViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ShotDetailsViewModel.cs" />

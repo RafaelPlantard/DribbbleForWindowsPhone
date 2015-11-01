@@ -55,7 +55,7 @@
 
             </Grid>
 
-            <Grid Background="{Binding Path=Image400Url, Converter={StaticResource ImageBrushConverter}}" Grid.Row="1" Margin="10" />
+            <Grid Background="{Binding Path=Images.Normal, Converter={StaticResource ImageBrushConverter}}" Grid.Row="1" Margin="10" />
 
             <StackPanel Grid.Row="2" Orientation="Vertical">
                 <StackPanel Style="{ThemeResource DribbleDetailsStackPanelStyle}">

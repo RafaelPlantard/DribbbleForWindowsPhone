@@ -24,7 +24,7 @@
 
     <ImageBrush ImageSource="ms-appx:///Images/User.png" x:Key="UserImageBrush" />
 
-    <!--#endregion ImageBrush-->
+    <!--#endregion-->
 
     <!--#region SolidColorBrush-->
 
@@ -44,9 +44,9 @@
 
     <SolidColorBrush Color="#00B6E3" x:Key="TeamsBrush"/>
 
-    <!--#endregion SolidColorBrush-->
+    <!--#endregion-->
 
-    <!--#endregion Brushes-->
+    <!--#endregion-->
 
     <!--#region Converters-->
 
@@ -54,7 +54,7 @@
 
     <jConverters:MathConverter x:Key="MathConverter" />
 
-    <!--#endregion Converters-->
+    <!--#endregion-->
 
     <!--#region Styles-->
 
@@ -72,7 +72,7 @@
         <Setter Property="Margin" Value="2.5,0" />
     </Style>
 
-    <!--#endregion Grids-->
+    <!--#endregion-->
 
     <!--#region Images-->
 
@@ -158,7 +158,16 @@
         <Setter Property="Source" Value="ms-appx:///Images/UploadLight.png" />
     </Style>
 
-    <!--#endregion Images-->
+    <!--#endregion-->
+
+    <!--#region ListViewItem-->
+
+    <Style TargetType="ListViewItem">
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    </Style>
+    
+    <!--#endregion-->
 
     <!--#region Pages-->
 
@@ -166,7 +175,7 @@
         <Setter Property="Background" Value="{ThemeResource ApplicationPageBackgroundThemeBrush}" />
     </Style>
 
-    <!--#endregion Pages-->
+    <!--#endregion-->
 
     <!--#region StackPanels-->
 
@@ -176,7 +185,7 @@
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 
-    <!--#endregion StackPanels-->
+    <!--#endregion-->
 
     <!--#region TextBlocks-->
 
@@ -220,13 +229,13 @@
         <Setter Property="Foreground" Value="{ThemeResource CharcoalBrush}" />
     </Style>
 
-    <!--#endregion TextBlocks-->
+    <!--#endregion-->
 
-    <!--#endregion Styles-->
+    <!--#endregion-->
 
     <!--#region Triggers-->
 
-    <!--#endregion Triggers-->
+    <!--#endregion-->
 
     <!--#region Control Templates-->
 
@@ -234,7 +243,7 @@
 
     <DataTemplate x:Key="ShotItemTemplate">
 
-        <Grid Background="{Binding Path=Image400Url, Converter={StaticResource ImageBrushConverter}}" Margin="0,0,0,10" Height="275" Width="380" x:Name="ShotGrid">
+        <Grid Background="{Binding Path=Images.Normal, Converter={StaticResource ImageBrushConverter}}" Margin="0,0,0,10" Height="275" Width="380" x:Name="ShotGrid">
             <!--TODO: Test: Double Tap to show more details.-->
 
             <i:Interaction.Behaviors>
@@ -358,12 +367,12 @@
         <StackPanel HorizontalAlignment="Center" Margin="10,5" Orientation="Horizontal" />
     </ItemsPanelTemplate>
 
-    <!--#endregion Main Page-->
+    <!--#endregion Page-->
 
-    <!--#endregion Control Templates-->
+    <!--#endregion Templates-->
 
     <!--#region Storyboards-->
 
-    <!--#endregion Storyboards-->
+    <!--#endregion-->
 
 </ResourceDictionary>

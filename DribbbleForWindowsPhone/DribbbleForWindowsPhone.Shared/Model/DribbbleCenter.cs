@@ -66,9 +66,9 @@ namespace DribbbleForWindowsPhone.Model
 
             string dataJson = await DribbbleApiHelpers.GetJsonResponseFromDribbbleApi(uri);
 
-            dataJson = DribbbleApiHelpers.FixFormatDribbleJson(dataJson);
+            Shots = JsonConvert.DeserializeObject<IList<Shot>>(dataJson);
 
-            Dribbble = JsonConvert.DeserializeObject<DribbbleCenter>(dataJson);
+            Pages = 99; // Set a manual number of pages, because, this value is not more returned for the API.
         }
 
         #endregion Public
